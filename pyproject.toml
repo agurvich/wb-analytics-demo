@@ -1,0 +1,38 @@
+[project]
+name = "wb-analytics"
+version = "0.1.0"
+description = "Internal analytics utilities for WB poverty, inequality, and indicator pipelines."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Alex Gurvich", email = "alex.b.gurvich@gmail.com" }]
+dependencies = [
+    "pandas==1.5.3",
+    "requests==2.31.0",
+    "pyyaml==6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "black>=23.0",
+    "ruff>=0.1",
+    "pre-commit>=3.5",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.black]
+line-length = 100
