@@ -7,6 +7,7 @@ requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [{ name = "Alex Gurvich", email = "alex.b.gurvich@gmail.com" }]
 dependencies = [
+    "pytest>=7.4.3",
     "pandas>=2.1.4",
     "numpy>=1.26.4",
     "pandas==1.5.3",
