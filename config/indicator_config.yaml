@@ -1,0 +1,7 @@
+indicators:   
+  poverty_rate:
+    unit: percent   
+    source: household_survey
+  gini:
+    unit: index
+    source: household_survey   
