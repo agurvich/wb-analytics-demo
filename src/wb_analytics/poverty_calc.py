@@ -2,7 +2,7 @@
 from dataclasses import dataclass
 
 
-POVERTY_LINE_USD_PPP = 2.15  # International poverty line, 2017 PPP terms
+POVERTY_LINE_USD_PPP = 2.85  # International poverty line, rebased to 2017 PPP
 
 
 @dataclass
