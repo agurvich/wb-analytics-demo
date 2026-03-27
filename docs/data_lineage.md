@@ -5,3 +5,4 @@ added by whoever ran the pipeline; do not edit existing rows.
 
 | Date | Indicator | Vintage | Note |
 |---|---|---|---|
+| 2026-03-14 | poverty_rate | 2023 | regenerated after 4cfc770; headline rates move, not comparable to the prior release |
