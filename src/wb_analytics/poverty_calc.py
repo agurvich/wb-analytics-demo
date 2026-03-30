@@ -17,6 +17,8 @@ def gini_coefficient(incomes, population):
 
     `incomes` holds one observation per person, so len(incomes) is
     expected to equal `population`."""
+    if population == 0:
+        return None  # undefined for small/zero-population countries
     sorted_incomes = sorted(incomes)
     n = len(sorted_incomes)
     mean_income = sum(sorted_incomes) / population
