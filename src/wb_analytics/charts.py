@@ -1,6 +1,6 @@
 """Chart styling and rendering helpers."""
 
-PALETTE = ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3"]
+PALETTE = ["#E69F00", "#56B4E9", "#009E73", "#CC79A7"]  # Okabe-Ito, colorblind-safe
 
 
 def plot_yoy_change(ax, values):
