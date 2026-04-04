@@ -1,7 +1,7 @@
 """Household survey microdata handling."""
 import pandas as pd
 
-SURVEY_VINTAGE = 2022
+SURVEY_VINTAGE = 2023  # refreshed for 14 countries
 SAMPLING_FRAME = "2010_census"
 
 
