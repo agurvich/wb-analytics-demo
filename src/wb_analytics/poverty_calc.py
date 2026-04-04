@@ -1,5 +1,6 @@
 """Core poverty and inequality calculations for WB analytics."""
 from dataclasses import dataclass
+from typing import Optional, Tuple
 
 
 POVERTY_LINE_USD_PPP = 2.85  # International poverty line, rebased to 2017 PPP
@@ -10,6 +11,7 @@ class PovertyEstimate:
     country: str
     year: int
     rate: float
+    confidence_interval: Optional[Tuple[float, float]] = None
 
 
 def gini_coefficient(incomes, population):
