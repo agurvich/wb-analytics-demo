@@ -1,6 +1,6 @@
 """Currency conversion utilities."""
 
-DEFAULT_RATE_TYPE = "market"
+DEFAULT_RATE_TYPE = "ppp_adjusted"
 EXCHANGE_RATE_SOURCE = "monthly_avg"
 
 
