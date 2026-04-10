@@ -11,6 +11,8 @@ def get_cached(key):
     if entry is None:
         return None
     value, cached_at = entry
+    if time.time() - cached_at > CACHE_TTL_SECONDS:
+        return None  # stale -- caller should refetch
     return value
 
 
