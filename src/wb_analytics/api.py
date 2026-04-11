@@ -3,8 +3,8 @@
 
 def poverty_rate_response(national_rate, intl_rate):
     return {
-        "poverty_rate_national": round(national_rate, 1),
-        "poverty_rate_intl": round(intl_rate, 1),
+        "poverty_rate_national": round(national_rate, 3),
+        "poverty_rate_intl": round(intl_rate, 3),
     }
 
 
