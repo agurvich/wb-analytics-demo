@@ -1,6 +1,6 @@
 """Export formatting for indicator data."""
 
-COLUMN_ORDER = ["country", "year", "indicator", "value", "legacy_gini"]
+COLUMN_ORDER = ["country", "year", "indicator", "value"]  # legacy_gini removed
 
 
 def to_json(records):
