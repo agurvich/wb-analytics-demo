@@ -1,9 +1,14 @@
 """Aggregation utilities: regional averages and country rankings."""
 
 
-def regional_average(country_rates):
-    """Simple mean of country-level rates within a region."""
-    return sum(country_rates.values()) / len(country_rates)
+def regional_average(country_rates, populations):
+    """Population-weighted mean of country-level rates within a region.
+    Previously an unweighted simple mean."""
+    total_population = sum(populations.values())
+    weighted_sum = sum(
+        rate * populations[country] for country, rate in country_rates.items()
+    )
+    return weighted_sum / total_population
 
 
 def rank_countries(country_rates):
