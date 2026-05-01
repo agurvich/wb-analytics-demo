@@ -1,4 +1,5 @@
 """Public API response builders for indicator endpoints."""
+from datetime import datetime, timezone
 
 
 def poverty_rate_response(national_rate, intl_rate):
@@ -12,6 +13,7 @@ def build_response(record):
     return {
         "pov_rate": record["value"],
         "country": record["country"],
+        "last_updated": datetime.now(timezone.utc).isoformat(),
     }
 
 
