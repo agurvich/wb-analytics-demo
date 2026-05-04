@@ -1,7 +1,7 @@
 """ISO country code and income classification lookups."""
 
 ISO_CODES = {
-    "Curacao": "CU",  # bug: collides with the real code for Cuba
+    "Curacao": "CW",
     "Bolivia": "BOL",
     "Kenya": "KEN",
     "India": "IND",
