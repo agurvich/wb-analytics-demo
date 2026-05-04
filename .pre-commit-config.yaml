@@ -4,6 +4,6 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: ruff
