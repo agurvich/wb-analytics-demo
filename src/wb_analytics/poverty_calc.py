@@ -32,3 +32,11 @@ def poverty_rate(incomes, line=POVERTY_LINE_USD_PPP):
     """Share of population living below the poverty line."""
     below = [i for i in incomes if i < line]
     return len(below) / len(incomes)
+
+
+def poverty_gap_index(incomes, population, line=POVERTY_LINE_USD_PPP):
+    """Mean shortfall below the poverty line, as a share of the line.
+
+    Averaged over the whole population, including those above the line."""
+    shortfalls = [max(line - i, 0) for i in incomes]
+    return sum(shortfalls) / (population * line)
