@@ -10,4 +10,5 @@ def to_json(records):
 def to_excel(records, path):
     # Pretend this writes an .xlsx file.
     for r in records:
-        r["value"] = f"{r['value']:.1f}"
+        sign = "-" if r["value"] < 0 else ""
+        r["value"] = f"{sign}{abs(r['value']):.1f}"
