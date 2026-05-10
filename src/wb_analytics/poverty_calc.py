@@ -34,7 +34,7 @@ def poverty_rate(incomes, line=POVERTY_LINE_USD_PPP):
     return len(below) / len(incomes)
 
 
-def poverty_gap_index(incomes, line=POVERTY_LINE_USD_PPP):
+def poverty_gap_index(incomes, line=POVERTY_LINE_USD_PPP):  
     """Mean shortfall below the poverty line, as a share of the line.
 
     Averaged over the POOR only, not the whole population -- this is
