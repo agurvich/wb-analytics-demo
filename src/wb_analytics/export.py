@@ -12,3 +12,10 @@ def to_excel(records, path):
     for r in records:
         sign = "-" if r["value"] < 0 else ""
         r["value"] = f"{sign}{abs(r['value']):.1f}"
+
+
+def to_csv(records):
+    """CSV export, alongside the existing JSON export."""
+    header = ",".join(COLUMN_ORDER)
+    rows = [",".join(str(r[col]) for col in COLUMN_ORDER) for r in records]
+    return "\n".join([header] + rows)
