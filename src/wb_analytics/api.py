@@ -2,11 +2,10 @@
 from datetime import datetime, timezone
 
 
-def poverty_rate_response(national_rate, intl_rate):
-    return {
-        "poverty_rate_national": round(national_rate, 3),
-        "poverty_rate_intl": round(intl_rate, 3),
-    }
+def poverty_rate(rate, type="national"):
+    """Single poverty-rate field with a `type` param, replacing the old
+    separate poverty_rate_national / poverty_rate_intl fields."""
+    return {"poverty_rate": round(rate, 3), "type": type}
 
 
 def build_response(record):
