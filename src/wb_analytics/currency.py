@@ -4,7 +4,7 @@ import os
 # Configurable since the 2026 Q2 methodology call: regional
 # comparisons default to market rates, cross-country work to PPP.
 DEFAULT_RATE_TYPE = os.environ.get("WB_RATE_TYPE", "ppp_adjusted")
-EXCHANGE_RATE_SOURCE = "monthly_avg"
+EXCHANGE_RATE_SOURCE = "daily_spot"
 
 
 def ppp_conversion_factor(country, year):
