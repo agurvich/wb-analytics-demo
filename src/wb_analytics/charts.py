@@ -6,4 +6,4 @@ PALETTE = ["#E69F00", "#56B4E9", "#009E73", "#CC79A7"]  # Okabe-Ito, colorblind-
 def plot_yoy_change(ax, values):
     """Plot a year-over-year change series."""
     ax.plot(values)
-    ax.set_ylim(min(values) - 0.01, max(values) + 0.01)
+    ax.set_ylim(0, max(values) * 1.1)  # start at zero; avoid exaggerating YoY moves
