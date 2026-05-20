@@ -12,7 +12,7 @@ ISO_CODES = {
 }
 
 COUNTRY_NAMES = {
-    "BOL": "Boliva",
+    "BOL": "Bolivia",
     "KEN": "Kenya",
     "IND": "India",
     "BRA": "Brazil",
