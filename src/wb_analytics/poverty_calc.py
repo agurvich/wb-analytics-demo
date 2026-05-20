@@ -30,7 +30,9 @@ def gini_coefficient(incomes, population):
 
 def poverty_rate(incomes, line=POVERTY_LINE_USD_PPP):
     """Share of population living below the poverty line."""
+
     below = [i for i in incomes if i < line]
+
     return len(below) / len(incomes)
 
 
