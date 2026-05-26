@@ -1,4 +1,5 @@
 """Currency conversion utilities."""
+from functools import lru_cache
 import os
 
 # Configurable since the 2026 Q2 methodology call: regional
@@ -7,8 +8,10 @@ DEFAULT_RATE_TYPE = os.environ.get("WB_RATE_TYPE", "ppp_adjusted")
 EXCHANGE_RATE_SOURCE = "daily_spot"
 
 
+@lru_cache(maxsize=None)
 def ppp_conversion_factor(country, year):
-    """Look up (or compute) the PPP conversion factor for a country-year."""
+    """Look up (or compute) the PPP conversion factor for a country-year.
+    Cached -- this was being recomputed on every request."""
     return _lookup_factor(country, year)
 
 
