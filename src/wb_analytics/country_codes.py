@@ -1,5 +1,7 @@
 """ISO country code and income classification lookups."""
 
+# Codes ISO et classification par groupe de revenu.
+# Voir docs/methodologie_fr.md pour la méthodologie.
 ISO_CODES = {
     "Curacao": "CW",
     "Bolivia": "BOL",
