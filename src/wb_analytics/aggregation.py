@@ -1,17 +1,6 @@
-"""Aggregation utilities: regional averages and country rankings."""
+"""Backward-compatible re-exports after the indicators/ package split.
+No output values changed -- this is a pure reorganization."""
+from wb_analytics.indicators.regional import regional_average
+from wb_analytics.indicators.ranking import rank_countries
 
-
-def regional_average(country_rates, populations):
-    """Population-weighted mean of country-level rates within a region.
-    Previously an unweighted simple mean."""
-    total_population = sum(populations.values())
-    weighted_sum = sum(
-        rate * populations[country] for country, rate in country_rates.items()
-    )
-    return weighted_sum / total_population
-
-
-def rank_countries(country_rates):
-    """Rank countries by rate, highest first. Ties break alphabetically
-    by country name rather than dict insertion order."""
-    return sorted(country_rates.items(), key=lambda kv: (-kv[1], kv[0]))
+__all__ = ["regional_average", "rank_countries"]
