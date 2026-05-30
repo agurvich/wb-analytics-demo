@@ -10,7 +10,7 @@ def poverty_rate(rate, type="national"):
 
 def build_response(record):
     return {
-        "pov_rate": record["value"],
+        "poverty_rate": record["value"],
         "country": record["country"],
         "last_updated": datetime.now(timezone.utc).isoformat(),
     }
