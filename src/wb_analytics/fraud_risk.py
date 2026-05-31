@@ -3,7 +3,7 @@
 
 def score_transaction(transaction):
     """Return a fraud-risk score for a single transaction record."""
-    country_code = transaction["country_code"].upper()
+    country_code = (transaction.get("country_code") or "UNKNOWN").upper()
     return _country_risk_weight(country_code) * transaction["amount"]
 
 
