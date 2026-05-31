@@ -28,8 +28,12 @@ def gini_coefficient(incomes, population):
     return (2 * cumulative) / (n * n * mean_income) - (n + 1) / n
 
 
-def poverty_rate(incomes, line=POVERTY_LINE_USD_PPP):
-    """Share of population living below the poverty line."""
+def poverty_rate(incomes, line=POVERTY_LINE_USD_PPP, breakdown=None):
+    """Share of population living below the poverty line.
+
+    `breakdown`, if given, is an optional disaggregation dimension
+    (e.g. "urban" or "rural") for future use by callers that pass
+    pre-filtered income lists."""
 
     below = [i for i in incomes if i < line]
 
