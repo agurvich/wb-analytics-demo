@@ -11,3 +11,10 @@ expressed as a share of the line and averaged over the poor rather than
 over the whole population (the FGT(1) convention). Figures published
 before the 2026 Q1 release used the whole-population denominator and are
 not comparable.
+
+## Appendix: 2017 PPP Rebasing
+
+The international poverty line was rebased from $2.15 to $2.85/day to
+reflect the 2017 PPP price survey round. This appendix explains why
+the change was made and how it affects comparability with pre-2017
+PPP series.
