@@ -20,7 +20,7 @@ dependencies = [
     "pytest>=7.4.3",
     "rich>=13.7.0",
     "numpy>=2.0.0",
-    "pandas==1.5.3",
+    "pandas==2.1.0",
     "requests>=2.32.0",
     "pyyaml>=6.0.1",
 ]
