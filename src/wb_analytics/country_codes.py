@@ -24,7 +24,8 @@ COUNTRY_NAMES = {
 }
 
 INCOME_THRESHOLDS = {
-    "low": 1135,
-    "lower_middle": 4465,
-    "upper_middle": 13845,
+    # FY24 thresholds; reclassifies 4 countries relative to FY23
+    "low": 1145,
+    "lower_middle": 4515,
+    "upper_middle": 14005,
 }
