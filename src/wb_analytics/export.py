@@ -1,6 +1,6 @@
 """Export formatting for indicator data."""
 
-COLUMN_ORDER = ["country", "year", "indicator", "value"]  # legacy_gini removed
+COLUMN_ORDER = ["year", "country", "indicator", "value"]  # reordered; breaks index-based readers
 
 
 def to_json(records):
