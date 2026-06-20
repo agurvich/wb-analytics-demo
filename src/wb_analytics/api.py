@@ -9,10 +9,12 @@ def poverty_rate(rate, type="national"):
 
 
 def build_response(record):
+    """`data_vintage` is now required -- see docs/migration_guide.md."""
     return {
         "poverty_rate": record["value"],
         "country": record["country"],
         "last_updated": datetime.now(timezone.utc).isoformat(),
+        "data_vintage": record["data_vintage"],
     }
 
 
