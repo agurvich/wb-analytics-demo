@@ -1,0 +1,116 @@
+<svg viewBox="0 0 1200 1080" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3c4a5e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="1080" fill="#fbfaf7"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#1c2b3a">Where does this code actually live?</text>
+  <text x="600" y="66" text-anchor="middle" font-size="14" fill="#5b6b7a">An opinionated flowchart. Disagree with a branch? Good — that's a real conversation to have with your team.</text>
+
+  <!-- Start -->
+  <rect x="410" y="90" width="380" height="60" rx="10" fill="#1c2b3a"/>
+  <text x="600" y="115" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="600">You've got a script, function, or notebook cell</text>
+  <text x="600" y="134" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="600">that does something useful. What now?</text>
+  <line x1="600" y1="150" x2="600" y2="180" stroke="#3c4a5e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Diamond 1 -->
+  <polygon points="600,180 780,255 600,330 420,255" fill="#ffffff" stroke="#3c4a5e" stroke-width="2"/>
+  <text x="600" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#1c2b3a">Does more than one project</text>
+  <text x="600" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#1c2b3a">or team use this?</text>
+
+  <!-- Branch labels + lines from diamond 1 -->
+  <line x1="420" y1="255" x2="250" y2="255" stroke="#3c4a5e" stroke-width="2"/>
+  <text x="335" y="243" text-anchor="middle" font-size="13" font-weight="700" fill="#b3541e">No</text>
+  <line x1="250" y1="255" x2="250" y2="330" stroke="#3c4a5e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="780" y1="255" x2="950" y2="255" stroke="#3c4a5e" stroke-width="2"/>
+  <text x="865" y="243" text-anchor="middle" font-size="13" font-weight="700" fill="#1c7a52">Yes</text>
+  <line x1="950" y1="255" x2="950" y2="330" stroke="#3c4a5e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Diamond 2 (left column) -->
+  <polygon points="250,330 400,405 250,480 100,405" fill="#ffffff" stroke="#3c4a5e" stroke-width="2"/>
+  <text x="250" y="396" text-anchor="middle" font-size="13" font-weight="700" fill="#1c2b3a">Will YOU personally reuse</text>
+  <text x="250" y="414" text-anchor="middle" font-size="13" font-weight="700" fill="#1c2b3a">this across other projects?</text>
+
+  <!-- Diamond 3 (right column) -->
+  <polygon points="950,330 1120,405 950,480 780,405" fill="#ffffff" stroke="#3c4a5e" stroke-width="2"/>
+  <text x="950" y="396" text-anchor="middle" font-size="13" font-weight="700" fill="#1c2b3a">Is the behavior stable --</text>
+  <text x="950" y="414" text-anchor="middle" font-size="13" font-weight="700" fill="#1c2b3a">not still changing week to week?</text>
+
+  <!-- Diamond2 branches -->
+  <line x1="100" y1="405" x2="100" y2="650" stroke="#3c4a5e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="76" y="530" text-anchor="middle" font-size="13" font-weight="700" fill="#b3541e">No</text>
+  <line x1="250" y1="480" x2="250" y2="530" stroke="#3c4a5e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="272" y="510" text-anchor="middle" font-size="13" font-weight="700" fill="#1c7a52">Yes</text>
+
+  <!-- Diamond3 branches -->
+  <line x1="780" y1="405" x2="670" y2="405" stroke="#3c4a5e" stroke-width="2"/>
+  <text x="725" y="393" text-anchor="middle" font-size="13" font-weight="700" fill="#b3541e">No</text>
+  <line x1="670" y1="405" x2="670" y2="530" stroke="#3c4a5e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="950" y1="480" x2="950" y2="530" stroke="#3c4a5e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="972" y="510" text-anchor="middle" font-size="13" font-weight="700" fill="#1c7a52">Yes</text>
+
+  <!-- Outcome: ONE-OFF -->
+  <rect x="10" y="650" width="180" height="95" rx="10" fill="#6b7686"/>
+  <text x="100" y="682" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">ONE-OFF</text>
+  <text x="100" y="702" text-anchor="middle" font-size="11" fill="#eef0f3">Leave it in the project.</text>
+  <text x="100" y="717" text-anchor="middle" font-size="11" fill="#eef0f3">Don't build infrastructure</text>
+  <text x="100" y="732" text-anchor="middle" font-size="11" fill="#eef0f3">nobody else will use.</text>
+
+  <!-- Outcome: PERSONAL TOOLKIT -->
+  <rect x="150" y="530" width="200" height="95" rx="10" fill="#1c7a8c"/>
+  <text x="250" y="562" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">PERSONAL TOOLKIT</text>
+  <text x="250" y="582" text-anchor="middle" font-size="11" fill="#eafbff">Your own utility repo/folder.</text>
+  <text x="250" y="597" text-anchor="middle" font-size="11" fill="#eafbff">Not shared infra -- yet. No</text>
+  <text x="250" y="612" text-anchor="middle" font-size="11" fill="#eafbff">obligation to support anyone else.</text>
+
+  <!-- Outcome: PROJECT TEMPLATE (from diamond3 No) -->
+  <rect x="560" y="530" width="220" height="95" rx="10" fill="#b3541e"/>
+  <text x="670" y="562" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">PROJECT TEMPLATE</text>
+  <text x="670" y="582" text-anchor="middle" font-size="11" fill="#fdece0">A copyable scaffold (e.g.</text>
+  <text x="670" y="597" text-anchor="middle" font-size="11" fill="#fdece0">Cookiecutter), not an importable</text>
+  <text x="670" y="612" text-anchor="middle" font-size="11" fill="#fdece0">dependency. Still evolving.</text>
+
+  <!-- Diamond 4 -->
+  <polygon points="950,530 1120,610 950,690 780,610" fill="#ffffff" stroke="#3c4a5e" stroke-width="2"/>
+  <text x="950" y="601" text-anchor="middle" font-size="13" font-weight="700" fill="#1c2b3a">Willing to write tests, version</text>
+  <text x="950" y="619" text-anchor="middle" font-size="13" font-weight="700" fill="#1c2b3a">it, and support other teams?</text>
+
+  <!-- Diamond4 branches -->
+  <line x1="780" y1="610" x2="670" y2="610" stroke="#3c4a5e" stroke-width="2"/>
+  <text x="725" y="598" text-anchor="middle" font-size="13" font-weight="700" fill="#b3541e">No</text>
+  <line x1="670" y1="610" x2="670" y2="700" stroke="#3c4a5e" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <text x="605" y="660" text-anchor="middle" font-size="10" fill="#8a6a55" font-style="italic">(same bucket</text>
+  <text x="605" y="672" text-anchor="middle" font-size="10" fill="#8a6a55" font-style="italic">as above)</text>
+
+  <line x1="950" y1="690" x2="950" y2="740" stroke="#3c4a5e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="972" y="720" text-anchor="middle" font-size="13" font-weight="700" fill="#1c7a52">Yes</text>
+
+  <!-- Outcome: PROJECT TEMPLATE (from diamond4 No, honesty gate) -->
+  <rect x="560" y="700" width="220" height="95" rx="10" fill="#b3541e"/>
+  <text x="670" y="728" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">PROJECT TEMPLATE</text>
+  <text x="670" y="747" text-anchor="middle" font-size="11" fill="#fdece0">Be honest about maintenance</text>
+  <text x="670" y="762" text-anchor="middle" font-size="11" fill="#fdece0">appetite. A "shared library"</text>
+  <text x="670" y="777" text-anchor="middle" font-size="11" fill="#fdece0">nobody maintains is worse than</text>
+  <text x="670" y="789" text-anchor="middle" font-size="11" fill="#fdece0">an honest template.</text>
+
+  <!-- Outcome: SHARED LIBRARY -->
+  <rect x="830" y="740" width="240" height="105" rx="10" fill="#1c7a52"/>
+  <text x="950" y="772" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">SHARED LIBRARY</text>
+  <text x="950" y="792" text-anchor="middle" font-size="11" fill="#e6f7ee">Package it properly: pyproject.toml,</text>
+  <text x="950" y="807" text-anchor="middle" font-size="11" fill="#e6f7ee">tests, CI, semantic versioning.</text>
+  <text x="950" y="822" text-anchor="middle" font-size="11" fill="#e6f7ee">Other teams are depending on it now.</text>
+
+  <!-- Footer note -->
+  <rect x="60" y="920" width="1080" height="120" rx="10" fill="#eef1f4" stroke="#c7d0d8"/>
+  <text x="600" y="948" text-anchor="middle" font-size="14" font-weight="700" fill="#1c2b3a">The honesty gate is the point.</text>
+  <text x="600" y="972" text-anchor="middle" font-size="12" fill="#3c4a5e">Most "shared libraries" that rot into unmaintained pain started as code that technically qualified</text>
+  <text x="600" y="990" text-anchor="middle" font-size="12" fill="#3c4a5e">but nobody actually committed to supporting. If you wouldn't write tests and take a bug report from</text>
+  <text x="600" y="1008" text-anchor="middle" font-size="12" fill="#3c4a5e">another team next quarter, it's a template, not a library -- and that's a perfectly respectable answer.</text>
+
+</svg>
