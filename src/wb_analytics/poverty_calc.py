@@ -12,6 +12,7 @@ class PovertyEstimate:
     year: int
     rate: float
     confidence_interval: Optional[Tuple[float, float]] = None
+    is_estimated: bool = False  # True for historical model-based (non-survey) points
 
 
 def gini_coefficient(incomes, population):
