@@ -7,3 +7,23 @@ __pycache__/
 dist/
 build/
 .DS_Store
+
+# Secrets and local environment. Commit a .env.example, never a .env.
+.env
+.env.*
+!.env.example
+
+# Data stays out of git: raw extracts, processed outputs, and stray
+# exports anywhere in the tree. The small reference tables already in
+# data/raw/ stay tracked; add a new one deliberately with `git add -f`.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.csv
+*.xlsx
+*.parquet
+*.dta
+
+# Notebooks
+.ipynb_checkpoints/
