@@ -27,3 +27,32 @@ A commit history built on these prefixes doubles as an analytical audit
 trail: a reviewer (or a future you) can tell from `git log --oneline`
 alone which changes are safe to pull in blindly and which ones require
 re-checking downstream numbers.
+
+## Docstrings
+
+Public functions use [NumPy-style
+docstrings](https://numpydoc.readthedocs.io/en/latest/format.html): a
+one-line summary, then `Parameters` and `Returns`, and a `Notes` section
+wherever a methodology choice changes the number. One style across the
+repo matters more than which style it is.
+
+```python
+def poverty_rate(incomes, line=POVERTY_LINE_USD_PPP):
+    """Share of the population living below the poverty line.
+
+    Parameters
+    ----------
+    incomes : list of float
+        One daily income per person, in 2017 PPP dollars.
+    line : float, optional
+        The poverty line, in 2017 PPP dollars a day.
+
+    Returns
+    -------
+    float
+        The headcount ratio, between 0 and 1.
+    """
+```
+
+Older modules predate this. Convert a function's docstring when you next
+change that function, not in a separate sweep.
