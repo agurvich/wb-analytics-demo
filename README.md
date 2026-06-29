@@ -11,6 +11,18 @@ indicator pipelines.
 pip install -e ".[dev]"
 ```
 
+`pyproject.toml` states the minimum versions the code supports.
+`requirements-lock.txt` pins every package, dependencies of dependencies
+included, to the exact versions we run. To reproduce that environment:
+
+```bash
+pip install -r requirements-lock.txt
+pip install -e . --no-deps
+```
+
+After changing a dependency in `pyproject.toml`, run `make lock` and
+commit the updated lock file in the same commit.
+
 ## Usage
 
 ```python
