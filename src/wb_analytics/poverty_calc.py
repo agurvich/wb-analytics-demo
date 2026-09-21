@@ -35,9 +35,7 @@ def poverty_rate(incomes, line=POVERTY_LINE_USD_PPP, breakdown=None):
     `breakdown`, if given, is an optional disaggregation dimension
     (e.g. "urban" or "rural") for future use by callers that pass
     pre-filtered income lists."""
-
     below = [i for i in incomes if i < line]
-
     return len(below) / len(incomes)
 
 
