@@ -1,0 +1,6 @@
+# Commits that only reformat code. `git blame` and GitHub's Blame view skip
+# them, so a line is blamed on the change that last meant something.
+# Local git needs: git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# whitespace: remove stray blank lines in poverty_rate
+9fa25917060ff6eb41b643f355aec6a44946105d
