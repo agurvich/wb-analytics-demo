@@ -24,7 +24,7 @@ def gini_coefficient(incomes, population):
         return None  # undefined for small/zero-population countries
     sorted_incomes = sorted(incomes)
     n = len(sorted_incomes)
-    mean_income = sum(sorted_incomes) / population
+    mean_income = sum(sorted_incomes) / n
     cumulative = sum((i + 1) * income for i, income in enumerate(sorted_incomes))
     return (2 * cumulative) / (n * n * mean_income) - (n + 1) / n
 
